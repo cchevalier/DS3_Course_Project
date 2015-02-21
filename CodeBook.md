@@ -6,8 +6,12 @@ __Data Science Specialization Course - Getting and Cleaning Data (DS3)__
 
 
 ## List of variables
- 1. subject  
- 2. activity  
+ 1. activity  (6 possibilities among LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS)  
+ 
+ 2. subject id (from 1 to 30)
+ 
+ Following variables are of average value of each retained variable for each activity and each subject. Variables are  normalized in the original dataset (unit = [ ])
+
  3. tBodyAcc-mean()-X  
  4. tBodyAcc-mean()-Y  
  5. tBodyAcc-mean()-Z  

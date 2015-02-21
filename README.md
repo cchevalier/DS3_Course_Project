@@ -1,8 +1,8 @@
 # DS3_Course_Project
 Project repository for the Data Science Course "Getting and Cleaning Data" (DS3)
 
-## Assignment
-You should create one R script called run_analysis.R that does the following:       
+## run_analysis.R
+As required by the assigment, this R script does the following:       
 
 1. Merges the training and the test sets to create one data set.   
 
@@ -16,7 +16,7 @@ You should create one R script called run_analysis.R that does the following:
 
 
 
-## Relevant Info from __features_info.txt__
+## Relevant Info from __features_info.txt__ regarding the required selected variables
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
@@ -45,3 +45,5 @@ Among the set of variables that were estimated from these signals we are interes
 
 * mean(): Mean value
 * std(): Standard deviation
+
+This will lead to retain 66 columns from the orginal datasets.

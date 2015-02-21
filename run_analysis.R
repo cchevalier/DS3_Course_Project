@@ -1,12 +1,20 @@
 ##
 ## run_analysis.R
 ##
-## Project for the Data Science Specialization Course - Getting and Cleaning Data (DS3)
+## See README.md for a general presentation / requirements of this script.
+##
+## Script written as required by the Project Assignement 
+## for the Data Science Specialization Course - Getting and Cleaning Data (DS3)
+##
+## (c) cchevalier, Feb. 2015
 
+
+# package reshape2 should be installed before running this script
+# install.packages("reshape2")
 library(reshape2)
 
 
-# Set different data folders
+# Set paths to different data folders
 folder_main  <- "./UCI HAR Dataset"
 folder_test  <- file.path(folder_main, "test")
 folder_train <- file.path(folder_main, "train")
@@ -29,8 +37,8 @@ activity_train <- read.table(file.path(folder_train, "y_train.txt"))
 features_train <- read.table(file.path(folder_train, "X_train.txt"))
 
 
-# Merge test and train
-# Assign proper names to the different test data files
+# Merge test and train (requirement no 1)
+# Assign proper names to the different variables in each test data files (requirement no 4)
 subject  <- rbind(subject_test, subject_train)
 names(subject)  <- "subject"
 
@@ -44,8 +52,12 @@ names(features) <- labels_features[,2]
 rm(activity_test, activity_train, subject_test, subject_train, features_test, features_train) 
 
 
-# From the 17 signals we will retain only the 
-# variables mean() and std() 
+# From the 17 signals of a feature vector we will retain only the 
+# variables mean() and std() - (requirement no 2)
+#
+# I prefer to define a direct index of the selected columns rather
+# than using selection by regular pattern which might lead to unwanted
+# variables
 idx <- c(1:6)               ##  tBodyAcc-XYZ
 idx <- c(idx, c(41:46))     ##  tGravityAcc-XYZ
 idx <- c(idx, c(81:86))     ##  tBodyAccJerk-XYZ
@@ -67,10 +79,10 @@ idx <- c(idx, c(542:543))   ##  fBodyGyroJerkMag
 
 # Merge 3 datasets into one data frame retaining 
 # only the selected columns given by idx for the 
-# features datasets
+# features datasets (requirement no 2)
 DF <- cbind(activity, subject, features[,idx])
 
-# Change code activity to its proper label
+# Change code activity to its proper label (requirement no 4)
 DF[,1] <- labels_activity[,2][DF[,1]]
 
 # Cleaning phase 2
@@ -83,11 +95,16 @@ remove (activity, subject, features)
 #   print(sprintf("%2i. %s", i, n))
 # }
 
-# Reshape DF using melt using id: activity and subject
+# Creates a second, independent tidy data set with the average of 
+# each variable for each activity and each subject (requirement no 5)
+#
+# First, reshape DF using melt using id: activity and subject
 DFmelt <- melt(DF, id=c("activity", "subject"), measures.vars = names(DF[3:68])) 
 
-# Define tidy data set by computing mean for different measures using dcast 
+# Then define tidy data set by computing mean for different measures using dcast 
 DFtidy <- dcast(DFmelt, activity + subject ~ variable, mean)
 
-# Save tidy
-write.table(DFtidy, file = "./tidy_data.txt")
+# Finally Save tidy data set
+write.table(DFtidy, file = "./tidy_data.txt", row.name=FALSE)
+
+## End of script.
