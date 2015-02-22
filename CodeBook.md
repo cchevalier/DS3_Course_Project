@@ -1,9 +1,9 @@
 ## CodeBook.md
 ------
-# Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)
+Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)
 ------
 
-## Background: Original data set
+### Input: Original raw data set
 The [original] data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
@@ -12,7 +12,7 @@ project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
-## Cleaning Processing 
+### The Cleaning Processing / R script run_analysis.R
 
 As per requirement, the R script run_analysis.R performs the following actions on the original dataset:
 
@@ -24,18 +24,20 @@ As per requirement, the R script run_analysis.R performs the following actions o
 
 4. Appropriately labels the data set with descriptive variable names.   
 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject (which is saved in txt file named tidy_data.txt)
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject (which is saved in the output file named tidy_data.txt)
 
 See script also README.me and script run_analysis.R for additional info.
 
 
-## List of variables of tidy_data.txt
+### Output: tidy_data.txt
+
+__List of variables of tidy_data.txt__
 
 Col.  1:   activity  (LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS or WALKING_UPSTAIRS)  
  
 Col.  2:   subject id (from 1 to 30)
  
- Following variables are of average value of each retained variable for each activity and each subject. Variables are  normalized and bound to [-1, 1] in the original dataset (unit = [ ])
+The following columns [3-68] are average value of each retained variable for each activity and each subject. Variables are  normalized (unit = []) and bound to [-1, 1] in the original dataset and therefore the final tidy data set.
 
 Col.  3:   tBodyAcc-mean()-X  
 Col.  4:   tBodyAcc-mean()-Y  

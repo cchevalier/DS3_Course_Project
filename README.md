@@ -1,10 +1,11 @@
 ## README.md
 ------
-##DS3_Course_Project
-__ Project repository for the Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)__
+DS3_Course_Project
+Project repository for the Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)
 ------
 
 ## run_analysis.R
+
 As required by the assigment, this R script does the following:       
 
 1. Merges the training and the test sets to create one data set.   
