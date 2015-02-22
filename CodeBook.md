@@ -1,18 +1,48 @@
-## CodeBook.md
-------
-Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)
-------
+## CodeBook.md  
 
-### Input: Original raw data set
-The [original] data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
+Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)
+
+
+## Input: Original raw data set
+The [original] data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:   
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
-Original data for the 
-project: 
+Original data for the project:  
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+Relevant Info from __features_info.txt__ regarding the required selected variables
 
-### The Cleaning Processing / R script run_analysis.R
+The original signals were used to estimate the following 33 variables of the feature vector for each pattern:  
+
+* tBodyAcc-XYZ  
+* tGravityAcc-XYZ  
+* tBodyAccJerk-XYZ  
+* tBodyGyro-XYZ  
+* tBodyGyroJerk-XYZ  
+* tBodyAccMag  
+* tGravityAccMag  
+* tBodyAccJerkMag  
+* tBodyGyroMag  
+* tBodyGyroJerkMag  
+* fBodyAcc-XYZ   
+* fBodyAccJerk-XYZ  
+* fBodyGyro-XYZ  
+* fBodyAccMag  
+* fBodyAccJerkMag  
+* fBodyGyroMag  
+* fBodyGyroJerkMag  
+
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions respectively.
+
+Among the set of variables that were estimated from these signals we are interested by : 
+
+* mean(): Mean value   
+* std(): Standard deviation   
+
+This will lead to retain 66 columns from the original feature vector dataset during the cleaning process.   
+
+
+## The Cleaning Processing / R script run_analysis.R
 
 As per requirement, the R script run_analysis.R performs the following actions on the original dataset:
 
@@ -29,7 +59,7 @@ As per requirement, the R script run_analysis.R performs the following actions o
 See script also README.me and script run_analysis.R for additional info.
 
 
-### Output: tidy_data.txt
+## Output: tidy_data.txt
 
 __List of variables of tidy_data.txt__
 
