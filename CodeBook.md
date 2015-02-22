@@ -1,6 +1,7 @@
-# CodeBook.md
-
-__Data Science Specialization Course - Getting and Cleaning Data (DS3)__
+## CodeBook.md
+------
+# Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)
+------
 
 ## Background: Original data set
 The [original] data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
@@ -11,7 +12,8 @@ project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
-## Cleaning Processing (see script also README.me and script run_analysis.R for additional info)
+## Cleaning Processing 
+
 As per requirement, the R script run_analysis.R performs the following actions on the original dataset:
 
 1. Merges the training and the test sets to create one data set.   
@@ -24,13 +26,16 @@ As per requirement, the R script run_analysis.R performs the following actions o
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject (which is saved in txt file named tidy_data.txt)
 
+See script also README.me and script run_analysis.R for additional info.
 
-## List of variables of __tidy_data.txt__
-Col.  1:   activity  (6 possibilities among LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS)  
+
+## List of variables of tidy_data.txt
+
+Col.  1:   activity  (LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS or WALKING_UPSTAIRS)  
  
 Col.  2:   subject id (from 1 to 30)
  
- Following variables are of average value of each retained variable for each activity and each subject  Variables are  normalized in the original dataset (unit = [ ])
+ Following variables are of average value of each retained variable for each activity and each subject. Variables are  normalized and bound to [-1, 1] in the original dataset (unit = [ ])
 
 Col.  3:   tBodyAcc-mean()-X  
 Col.  4:   tBodyAcc-mean()-Y  
@@ -100,4 +105,3 @@ Col. 67:   fBodyBodyGyroJerkMag-mean()
 Col. 68:   fBodyBodyGyroJerkMag-std()
 
 
-  

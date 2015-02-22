@@ -1,5 +1,8 @@
-# DS3_Course_Project
-Project repository for the Data Science Course "Getting and Cleaning Data" (DS3)
+## README.md
+------
+##DS3_Course_Project
+__ Project repository for the Coursera Data Science Specialization Course - Getting and Cleaning Data (DS3)__
+------
 
 ## run_analysis.R
 As required by the assigment, this R script does the following:       
@@ -14,7 +17,7 @@ As required by the assigment, this R script does the following:
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.   
 
-Please see comments in the R script for additional information on the way this porcessing is achieved.
+Please see comments in the R script for additional information on the way this processing is achieved.
 
 
 
