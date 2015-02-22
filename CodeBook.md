@@ -2,7 +2,7 @@
 
 __Data Science Specialization Course - Getting and Cleaning Data (DS3)__
 
-## Background
+## Background: Original data set
 The [original] data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 
@@ -11,8 +11,9 @@ project:
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 
-## Cleaning Processing (see script run_analysis.R)
-As per requirement, 
+## Cleaning Processing (see script also README.me and script run_analysis.R for additional info)
+As per requirement, the R script run_analysis.R performs the following actions on the original dataset:
+
 1. Merges the training and the test sets to create one data set.   
 
 2. Extracts only the measurements on the mean and standard deviation for each measurement.    
@@ -24,7 +25,7 @@ As per requirement,
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject (which is saved in txt file named tidy_data.txt)
 
 
-## List of variables of tidy_data.txt
+## List of variables of __tidy_data.txt__
 Col.  1:   activity  (6 possibilities among LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS)  
  
 Col.  2:   subject id (from 1 to 30)
@@ -96,4 +97,7 @@ Col. 64:   fBodyBodyAccJerkMag-std()
 Col. 65:   fBodyBodyGyroMag-mean()  
 Col. 66:   fBodyBodyGyroMag-std()  
 Col. 67:   fBodyBodyGyroJerkMag-mean()  
-Col. 68:   fBodyBodyGyroJerkMag-std()  :   
+Col. 68:   fBodyBodyGyroJerkMag-std()
+
+
+  
