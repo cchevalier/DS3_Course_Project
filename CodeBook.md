@@ -12,7 +12,7 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 Relevant Info from __features_info.txt__ regarding the required selected variables
 
-The original signals were used to estimate the following 33 variables of the feature vector for each pattern:  
+The following 33 original signals were recorded for six different activities and 30 subjects:  
 
 * tBodyAcc-XYZ  
 * tGravityAcc-XYZ  
@@ -34,12 +34,12 @@ The original signals were used to estimate the following 33 variables of the fea
 
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions respectively.
 
-Among the set of variables that were estimated from these signals we are interested by : 
+These signals were then processed in order to estimate the different variables of the feature vector for each pattern. Among the set of variables that were estimated from these signals we are interested by: 
 
 * mean(): Mean value   
 * std(): Standard deviation   
 
-This will lead to retain 66 columns from the original feature vector dataset during the cleaning process.   
+This will lead to retain 66 variables / columns from the original feature vector dataset during the cleaning process.   
 
 
 ## The Cleaning Processing / R script run_analysis.R
